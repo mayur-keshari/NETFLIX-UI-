@@ -1,0 +1,779 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    width:100%;
+    height:100%;
+    overflow-x: hidden;
+    position:absolute;
+    background-color: black;
+}
+
+/* <!-- ------------------------head-container Starts here-------------------- --> */
+
+.head-container{
+    width: 100vw;
+    background: url(images/head-img.jpg);
+    height: 100vh;
+    background-position: start;
+    background-size: max(1440px, 100vw,100vh);
+    overflow: hidden;
+    position: relative;
+}
+.box{
+    height:100%;
+    width:100%;
+    opacity: 0.65;
+    background-color: black;
+    top:0;
+    position:absolute;
+}
+/* <!-- ----------------------nav bar Starts here----------------------- --> */
+.nav-container{
+    max-width:80vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0.87rem auto;
+    position:relative;
+    z-index:10;
+}
+.logo{
+    height:3.10rem;
+    width:9.95rem;
+}
+
+.sign-in-container{
+    display: flex;
+    align-items:center;
+    gap:0.92rem;
+}
+.language{
+    background: rgba(44, 43, 43, 0.5);
+    width:7rem;
+    height:1.97rem;
+    color:#ffffff;
+    font-size:1.1rem;
+    border-radius:0.25rem;
+    padding:0rem 0.3rem;
+}
+#lang{
+    background-color: #ffffff;
+    color:rgb(0,0,0);
+}
+.sign-in{
+    background-color: rgb(216, 10, 10);
+    color:#ffffff;
+    width:4.8rem;
+    height:1.97rem;
+    font-size:0.87rem;
+    font-weight:650;
+    border:none;
+    text-align: center;
+    border-radius:0.25rem;
+    cursor:pointer;
+}
+.sign-in:hover{
+    background-color: rgb(196, 10, 10);
+}
+/* <!-- ----------------------nav bar ends here----------------------- --> */
+
+.content-area{
+    position: relative;
+    z-index: 10;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:40vw;
+    text-align: center;
+    margin:10.5rem auto;
+    color:#ffffff;
+}
+.content, .email-area{
+    position: relative;
+    z-index: 10;
+}
+
+.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:1.3rem;
+}
+
+.content1{
+    font-size:3.5rem;
+    font-weight: 800;
+    gap: 0.8rem;
+    line-height: 4.15rem;
+}
+.content2{
+    font-size:1.3rem;
+    font-weight: 600;
+}
+.content3{
+    font-size:1rem;
+    font-weight:400;
+    margin-top:1rem;
+}
+
+.email-area{
+    display: flex;
+    align-items: center;
+    gap:0.47rem;
+    margin-top:0.99rem;
+    position:relative;
+    z-index:10;
+}
+
+.email{
+    width:23.5rem;
+    height:3.5rem;
+    background: rgba(15, 14, 14, 0.65);
+    color:#ffffff;
+    border-radius:0.28rem;
+    border:none;
+    border:1.5px solid #787676;
+    padding-left: 0.9rem;
+}
+ 
+.email-area .email:is(:focus, :valid){
+   padding:16px 20px 0;
+   font-size:1rem;
+}
+.email-area label{
+    position:absolute;
+    left:1.1rem;
+    color:#8c8c8c;
+    pointer-events: none;
+    font-weight:500;
+    font-size:0.97rem;
+    transition:all 0.1s ease;
+}
+
+.email-area input:is(:focus, :valid) ~ label {
+     padding-top:0.02rem;
+     font-size:0.75rem;
+     transform:translateY(-100%);
+}
+.get-started{
+    width:12.9rem;
+    height:3.5rem;
+    color:#ffffff;
+    border-radius:0.28rem;
+    border:none;
+    background-color: rgb(218, 12, 12);
+    font-size: 1.43rem;
+    font-weight:550;
+    line-height:3.7rem;
+    text-decoration: none;
+}
+.get-started:hover{
+    background-color: rgb(188, 10, 10);
+}
+
+/* <!-- ------------------------head-container ends here-------------------- --> */
+
+/* <!-- -----------------curve background starts here----------------- --> */
+
+.curve-container{
+    position:relative;
+    height:15vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    
+}
+
+ .curve-container .curve-background{
+    background-position: center;
+    position:absolute;    
+    height:100%;
+    width:100%;
+    border:5px solid rgb(225, 55, 83);
+    border-top-left-radius: 40% 30%;
+    border-top-right-radius: 40% 30%;
+    border-right: none; 
+    border-bottom: none; 
+    border-left: none;
+    background:radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 70%, rgba(0, 0, 0, 0.1) 100%), black;   
+    top:-30%;
+    color:white;
+    padding-left:6.5rem;
+    padding-top:55px;
+    font-size:1.5rem;
+    font-weight:600;
+}
+/* <!-- -----------------curve background starts here----------------- --> */
+
+/* ------------meda query for head-container, nav-container and .curve-background------------ */
+
+@media(max-width:1260px){
+    .content-area{
+        max-width:43vw;
+    }
+    .content1{
+        font-size:2.45rem;
+        font-weight:700;
+        line-height:3.1rem;
+    }
+    .content2{
+        font-size:0.95rem;
+        font-weight: 500;
+        line-height:0.45rem;
+    }
+    .content3{
+        font-size:0.9rem;
+        font-weight:500;
+        margin-top:0.63rem;
+    }
+    .email{
+        width:20.8rem;
+    }
+    .get-started{
+        width:9.8rem;
+        font-size:1.22rem;
+        line-height:1.2rem;
+    }
+    .curve-container .curve-background{
+        position:absolute;
+        top:-50%;
+        border-top-left-radius: 30% 20%;
+        border-top-right-radius: 30% 20%;
+        padding-left: 5rem;
+    }
+}
+
+@media(max-width:960px){
+    .nav-container{
+        max-width: 95vw;
+        margin:0.95rem auto;
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    .logo{
+        height:1.9rem;
+        width:6.3rem;
+    }
+    .sign-in{
+        font-size:0.9rem;
+        font-weight: 500;
+    }
+    .content-area{
+        margin:8.5rem auto;
+    }
+    .content1{
+        font-size:1.95rem;
+        font-weight:700;
+        line-height:2.6rem;
+    }
+    .content2{
+        font-size:0.95rem;
+        font-weight: 500;
+        line-height:0rem;
+    }
+    .content3{
+        font-size:0.935rem;
+        font-weight:500;
+        margin-top:0.63rem;
+    }
+    .email{
+        width:15.8rem;
+    }
+    .get-started{
+        width:11rem;
+        font-size:1.22rem;
+        line-height:1.2rem;
+    }
+    .curve-container .curve-background{
+        padding-left: 3.95rem;
+        font-size:1.25rem;
+    }
+}
+
+@media(max-width:600px){
+    .language{
+        width:4.5rem;
+        font-size:0.9rem;
+        padding:0rem 0rem;
+    }
+    .sign-in{
+        width:4.2rem;
+        height:1.9rem;
+        font-size:0.82rem;
+        font-weight:650;
+    }
+    .content-area{
+        margin:6.47rem auto;
+        max-width:90vw;
+    }
+    .content1{
+        font-size:1.9rem;
+        font-weight:700;
+        line-height:2.3rem;
+    }
+    .content2{
+        font-size:0.99rem;
+        font-weight: 500;
+        line-height:0rem;
+    }
+    .content3{
+        font-size:0.935rem;
+        font-weight:500;
+        margin-top:0.35rem;
+    }
+    .email-area{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+        width:90vw;
+        gap:0.9rem;
+    }
+    .email{
+        width:100%;
+        height:3.2rem;
+        padding-left:1rem;
+        padding-right:1rem;
+    }
+    .email-area label{
+        transform:translateY(54%);
+        font-size:1.02rem;
+    }
+    .email-area input:is(:focus, :valid) ~ label {
+        padding-top:0.02rem;
+        font-size:0.75rem;
+        transform:translateY(15%);
+   }
+    .get-started{
+        width:10rem;
+        font-size:1.2rem;
+        line-height:1.2rem;
+        height:3rem;
+    }
+    .curve-container .curve-background{
+        padding-left:4.3rem;
+    }
+}
+@media(max-width:310px){
+    .nav-container{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        gap:1rem;
+    }
+    .content-area{
+        margin:3rem auto;
+    }
+}
+/* ---------------------------------------------------------------------------------- */
+
+.hero-container{
+    width:100vw;
+    background-color:rgb(0,0,0);
+    position:relative;
+    top:-5.5%;
+}
+
+.movie-list-container{
+    width:90vw;
+    margin:0 auto;
+}
+.movie-category{
+    display:flex;
+    align-items:center;
+    gap:1.55rem;
+    padding:0.7rem 1.9rem;
+}
+.genre, .region{
+    background: rgba(44, 43, 43, 0.5);
+    color:#ffffff;
+    height:2.5rem;
+    border-radius:0.25rem;
+    font-size:1rem;
+    padding:0rem 0.3rem;
+}
+.region{
+    width:6rem;
+}
+.genre{
+    width:7.1rem;
+}
+#india, #global, #India, #Global{
+    background-color: #ffffff;
+    color:rgb(0,0,0);
+    display:block;
+}
+#Global{
+    display: none;
+}
+.movies-trending-display{
+    margin:0.7rem auto;
+    width:95%;
+    height:18rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:0.1rem;
+}
+.left-button, .right-button{
+    height:7.1rem;
+    width:1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: rgb(44, 43, 43);
+    border-radius: 0.5rem
+}
+.left-button{
+    display: none;
+}
+.trending-movies-wrapper{
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow: hidden;
+    margin:0rem auto;
+    width:93%;
+}
+.trending-movies{
+    width:calc(288px * 10);
+    height:16rem;
+    display:flex;
+    position:relative;
+    transition: transform 1.3s;
+}
+
+.india-movies-trending{
+    display: block;
+    height:95%;
+    min-width:14.8%;
+    background-color:#ffffff;
+    margin:0.5rem 1.5rem;
+    position:relative;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.india-movies-trending img{
+    display: block;
+    height: 100%;
+    width:100%;
+    transition: all 0.2s;
+    border-radius: 0.4rem;
+}
+.india-movies-trending img:hover{
+    transform:scale(1.04);
+}
+.card-number{
+    display: block;
+    position:absolute;
+    right:79%;
+    font-size:6rem;
+    color:rgb(0,0,0);
+    font-weight:1000;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255);
+    top:48%;
+    transition: transform 0.1s;
+}
+#no-10{
+    right:50%;
+}
+@media(max-width:1260px){
+    .hero-container{
+        top:-7.7%;
+    }
+    .movies-trending-display{
+    margin:0.7rem auto;
+    width:95%;
+    height:13rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:0.1rem;
+    overflow: hidden;
+    }
+    .trending-movies{
+        width:calc(144px * 10);
+        height:11rem;
+    }
+    .india-movies-trending{
+        height:170px;
+        min-width:125px;
+        margin:0.1rem 1.2rem;
+
+    }
+    .card-number{
+        font-size:4.8rem;
+        font-weight:800;
+        -webkit-text-stroke: 1.2px rgb(255, 255, 255);
+        top:45%;
+    }
+    
+}
+@media(max-width:960px){
+   .movie-category{
+    width:95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    gap:1rem;
+   }
+   .region, .genre{
+    width:100%;
+   }
+   .movies-trending-display{
+    margin:0.7rem auto;
+    width:95%;
+    height:11rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:0.2rem;
+    overflow: hidden;
+    }
+    .trending-movies{
+        width:calc(144px * 10);
+        height:11rem;
+    }
+    .india-movies-trending{
+        height:165px;
+        min-width:125px;
+        margin:0.1rem 1.1rem;
+
+    }
+    .card-number{
+        font-size:4rem;
+        font-weight:700;
+        -webkit-text-stroke: 1.2px rgb(255, 255, 255);
+        top:45%;
+    }
+}
+.mrtj-container{
+    width:87vw;
+   max-height:80vh;
+    margin:2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.mrtj-header{
+    width:100%;
+    color:rgb(255, 255, 255);
+}
+.mrtj-header h2{
+   font-weight: 600;
+}
+.mrtj-card-grid{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:16px;
+    margin-bottom: 1rem;
+}
+.mrtj-card{
+    color:white;
+    height:8.4rem;
+    width:50rem;
+    background: rgb(25, 24, 24);
+    overflow: hidden;
+    border-radius: 1rem;
+    padding:0.8rem;
+    border:1.5px solid rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.mrtj-card p{
+    font-size:1.2rem;
+}
+.mrtj-card img{
+    height:55px;
+    width:55px;
+    align-self: flex-end;
+}
+#tv-img{
+    width:100px;
+    height:60px;
+}
+@media(max-width:1260px){
+    .mrtj-card p{
+        font-size:1rem;
+    }
+}
+@media(max-width:960px){
+    .mrtj-card p{
+        font-size:1rem;
+    }
+    .mrtj-card-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:8px;
+    }
+    .mrtj-card{
+        width:100%;
+        height:7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mrtj-card img{
+        align-self: center;
+        height:70px;
+        width:70px;
+    }
+}
+.faq-container{
+    color:white;
+    width:87vw;
+    max-height:200vh;
+     margin:2rem auto;
+     display: flex;
+     flex-direction: column;
+     gap:1rem;
+}
+.faq-grid{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    margin-bottom: 1.1rem;
+}
+.faq-ques-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+}
+.faq-ques{
+    display: block;
+    width:87vw;
+    height:4.25rem;
+    display: flex;
+    border:1.5px solid rgb(53, 53, 53);
+    background: rgb(25, 24, 24);
+    justify-content: space-between;
+    align-items:center;
+    padding:1rem;
+    border-radius: 0.95rem;
+    font-size:1.1rem;
+}
+.faq-answer{
+    display: none;
+    width:100%;
+    max-height:50rem;
+    border:1.5px solid rgb(53, 53, 53);
+    background: rgb(25, 24, 24);
+    padding:1.2rem;
+    border-radius: 0.95rem;
+    font-size:1.1rem;
+}
+.faq-ques-card.active .faq-answer {
+    display: block;
+}
+@media(max-width:960px){
+    .faq-ques{
+        font-size: 1rem;
+    }
+    .faq-answer{
+        font-size: 1rem;
+    }
+}
+@media(max-width:600px){
+    .faq-ques{
+        font-size: 0.9rem;
+    }
+    .faq-answer{
+        font-size: 0.9rem;
+    }
+}
+.content-area2{
+    max-height:40vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:40vw;
+    text-align: center;
+    color:white;
+    margin:0 auto;
+    gap:0.7rem;
+    margin-bottom: 1rem;
+}
+.footer-container{
+    width:87vw;
+    margin:2.5rem auto;
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    color:#8c8c8c;
+    background-color: black;
+}
+.footer-container a{
+    color:#8c8c8c;
+}
+.footer-container .questions{
+   width:100%;
+}
+
+.footer-container .details{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap:15rem;
+}
+.footer-container .details ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1rem;
+}
+.footer-container .details ul a{
+    font-size:0.9rem;
+}
+.footer-container .footer-bottom{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:2.2rem;
+    margin-bottom:3rem;
+  }
+  @media(max-width:1260px){
+    .footer-container .details{
+        gap:10rem;
+    }
+  }
+  @media(max-width:960px){
+    .footer-container .details{
+        gap:8rem;
+    }
+    .footer-container .details ul a{
+        font-size:0.8rem;
+    }
+ }
+ @media(max-width:680px){
+    .footer-container .details{
+        gap:3rem;
+    }
+ }
+ @media(max-width:420px){
+    .footer-container .details{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+    }
+ }

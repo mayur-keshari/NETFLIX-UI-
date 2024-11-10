@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lp.css">
+    <style>
+        .sign-main-container{
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.65);
+            width:445px;
+            height:90vh;
+            margin:2rem auto;
+            display: flex;
+            flex-direction: column;
+            padding:48px 65px 0rem 65px;
+            gap:1.5rem;
+            align-items: start;
+        }
+        .sign-in-header{
+            align-self: self-start;
+            color:#ffffff;
+        }
+        .input-container{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            gap:0.95rem; 
+            width:100%;
+        }
+        .input-no, .input-pass{
+            width:100%;
+            height:53px;
+            position: relative;
+        }
+        .input-area{
+            width:100%;
+            height:100%;
+            background: rgba(15, 14, 14,0.75);
+            border: none;
+            border-radius: 4px;
+            color:#fff;
+            font-size: 1rem;
+            padding: 0 20px;
+            border:1.2px solid #787676;
+        }
+         .label{
+            position: absolute;
+            left:10px;
+            top:33%;
+            color: #8c8c8c;
+            pointer-events: none;
+            font-size: 0.9rem;
+            transition: all 0.1s ease;
+        }
+        .input-no input:is(:focus, :valid) ~label{
+           font-size: 0.85rem;
+           transform: translateY(-67%);
+        }
+        .input-pass input:is(:focus, :valid) ~label{
+           font-size: 0.85rem;
+           transform: translateY(-67%);
+        }
+        .input-no input:is(:focus, :valid){
+            padding-top: 20px;
+            padding-left:12px;
+        }
+        .input-pass input:is(:focus, :valid){
+            padding-top: 20px;
+            padding-left:12px;
+        }
+        #sign-in{
+            width:100%;
+            height:2.58rem;
+            border-radius: 4px;
+            border:none;
+            background-color: rgb(218, 12, 12);
+            color:#ffffff;
+            font-size:0.9rem;
+            font-weight: 600;
+        }
+        #sign-in:hover{
+            background-color: rgb(196, 10, 10);
+        }
+        .alternate{
+            color: #8c8c8c;
+            font-size:0.98rem;
+            font-weight: 550;
+        }
+        .sign-in-code{
+            width:100%;
+            height:2.58rem;
+            border-radius: 4px;
+            border:none;
+            background: rgba(66, 66, 66, 0.75);
+            color:#ffffff;
+            font-size:0.93rem;
+            font-weight: 550;
+        }
+        .sign-in-code:hover{
+            background: rgba(66, 66, 66, 0.60);
+        }
+        a{
+            text-decoration: none;
+        }
+        .forgot-link{
+            font-size:0.98rem;
+        }
+        .forgot-link,.sign-up-link{
+            color:#ffffff;
+        }
+        .sign-up-link:hover{
+            text-decoration: underline;
+        }
+        .forgot-link:hover{
+            text-decoration: underline;
+        }
+        .sign-in-footer{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap:1.2rem;
+            color:#ffffff;
+        }
+        .new-features{
+            color:#8c8c8c;
+            font-size: 0.98rem;
+            margin-right:2rem;
+        }
+        .sign-up-link{
+            margin-left:0.4rem;
+            font-weight: 600;
+        }
+        .security-text{
+            font-size: 0.8rem;
+            color:#8c8c8c;
+            font-weight: 100;
+        }
+        .security-text a{
+            color:#0071eb;
+        }
+        .security-text a:hover{
+            text-decoration: underline;
+        }
+        @media(max-width:600px){
+            .sign-main-container{
+                height:100vh;
+                width:100vw;
+                margin-top:0;
+                padding:16px 32px 0rem 32px;
+            }
+            .head-container{
+                background: rgb(0,0,0);
+
+            }
+            .input-no, .input-pass{
+                height:58.5px;
+            }
+            .label{
+            left:19px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            }
+            .input-no input:is(:focus, :valid){
+            padding-top: 20px;
+            padding-left:19px;
+        }
+        .input-pass input:is(:focus, :valid){
+            padding-top: 20px;
+            padding-left:19px;
+        }
+        }
+    </style>
+</head>
+<body>
+        <!-- ------------------------head-container Starts here-------------------- -->
+    <div class="head-container">
+
+            <!-- ----------------------nav bar Starts here----------------------- -->
+                <div class="nav-container">
+        
+                    <div class="logo-container">
+                        <img src="images/netflix.png" alt="NETFLIX" class="logo">
+                    </div>
+                </div> 
+            <!-- ----------------------nav bar ends here----------------------- -->
+        
+        
+        <div class="box"></div>
+        
+        <div class="sign-main-container">
+            <!-- <div class="sign-in-container"> -->
+                 <h1 class="sign-in-header">Sign In</h1>
+
+                 <form class="input-container">
+                    <div class="input-no">      
+                         <input type="email" id="username" class="input-area" required>
+                         <label class="label"> E-mail Address</label>
+                    </div>
+    
+                    <div class="input-pass">   
+                        <input type="password" id="user-password" class="input-area" minlength="5" maxlength="20" required>
+                        <label class="label">Password</label>
+                    </div>
+    
+                    <input type="submit" value="Sign In" id="sign-in">
+    
+                    <p class="alternate">OR</p>
+    
+                    <input type="button" value="Use a sign-in code" class="sign-in-code">
+    
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                </form>
+    
+                <div class="sign-in-footer">
+                    <form action="#" class="rem-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember Me</label>
+                    </form>
+    
+                    <p class="new-features">New to Netflix?<a href="#" class="sign-up-link">Sign up now.</a></p>
+    
+                    <p class="security-text"> This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a></p>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </div>
+
+    <footer class="footer-container">
+        <div class="questions">
+            <span>Questions?</span>
+            <span>Call</span>
+            <span>
+                <a href="tel:000-800-919-1694">000-800-919-1694</a>
+            </span>
+        </div>
+        <div class="details">
+            <ul>
+                <li><a href="#">
+                        FAQ
+                    </a></li>
+                <li><a href="#">
+                        Investor Relations
+                    </a></li>
+                <li><a href="#">
+                        Privacy
+                    </a></li>
+                <li><a href="#">
+                        Speed Test
+                    </a></li>
+            </ul>
+            <ul>
+                <li><a href="#">
+                        Help Center
+                    </a></li>
+                <li><a href="#">
+                        Jobs
+                    </a></li>
+                <li><a href="#">
+                        Cookie Preferences
+                    </a></li>
+                <li><a href="#">
+                        Legal Notices
+                    </a></li>
+            </ul>
+            <ul>
+                <li><a href="#">
+                        Account 
+                    </a></li>
+                <li><a href="#">
+                        Ways to Watch
+                    </a></li>
+                <li><a href="#">
+                        Corporate Information
+                    </a></li>
+                <li><a href="#">
+                        Only On Netflix
+                    </a></li>
+            </ul>
+            <ul>
+                <li><a href="#">
+                        Media Center
+                    </a></li>
+                <li><a href="#">
+                        Terms of Use
+                    </a></li>
+                <li><a href="#">
+                        Contact Us
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="footer-bottom">
+            <select name="lang" id="language" class="language">
+                <option value="eng" id="lang">English</option>
+                <option value="hindi" id="lang">Hindi</option>
+            </select>
+
+            <p class="netflix-in">Netflix India</p>
+        </div>
+    </footer> 
+</body>
+</html>
