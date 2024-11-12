@@ -212,7 +212,7 @@ body{
 }
 /* <!-- -----------------curve background starts here----------------- --> */
 
-/* ------------meda query for head-container, nav-container and .curve-background------------ */
+/* ------------media query for head-container, nav-container and .curve-background------------ */
 
 @media(max-width:1260px){
     .content-area{
@@ -373,6 +373,7 @@ body{
 }
 /* ---------------------------------------------------------------------------------- */
 
+/*---------------------- hero container starts here ----------------------*/
 .hero-container{
     width:100vw;
     background-color:rgb(0,0,0);
@@ -380,6 +381,7 @@ body{
     top:-5.5%;
 }
 
+/* ---------------------carosuel section starts here---------------------- */
 .movie-list-container{
     width:90vw;
     margin:0 auto;
@@ -484,6 +486,7 @@ body{
 #no-10{
     right:50%;
 }
+/* --------------------- media query for carosuel section ---------------------- */
 @media(max-width:1260px){
     .hero-container{
         top:-7.7%;
@@ -555,6 +558,10 @@ body{
         top:45%;
     }
 }
+
+/* ---------------------carosuel section ends here---------------------- */
+
+/* ------------------<!-- cards-container start -->--------------------- */
 .mrtj-container{
     width:87vw;
    max-height:80vh;
@@ -603,6 +610,7 @@ body{
     width:100px;
     height:60px;
 }
+/* ------------------<!-- media query for cards-container -->--------------------- */
 @media(max-width:1260px){
     .mrtj-card p{
         font-size:1rem;
@@ -632,6 +640,9 @@ body{
         width:70px;
     }
 }
+/* ------------------<!-- cards-container ends here -->--------------------- */
+
+/* ------------------<!-- questions-toggle-container starts -->------------- */
 .faq-container{
     color:white;
     width:87vw;
@@ -681,6 +692,7 @@ body{
 .faq-ques-card.active .faq-answer {
     display: block;
 }
+/* ------------------<!-- media query for questions-toggle-container-->------------- */
 @media(max-width:960px){
     .faq-ques{
         font-size: 1rem;
@@ -697,6 +709,7 @@ body{
         font-size: 0.9rem;
     }
 }
+/* ------------------<!-- questions-toggle-container ends here -->------------- */
 .content-area2{
     max-height:40vh;
     display:flex;
@@ -710,6 +723,10 @@ body{
     gap:0.7rem;
     margin-bottom: 1rem;
 }
+
+/*---------------------- hero container ends here ----------------------*/
+
+/* ------------------footer container starts here----------------- */
 .footer-container{
     width:87vw;
     margin:2.5rem auto;
@@ -751,6 +768,7 @@ body{
     gap:2.2rem;
     margin-bottom:3rem;
   }
+/* ------------------media query for footer container----------------- */
   @media(max-width:1260px){
     .footer-container .details{
         gap:10rem;
@@ -777,3 +795,4 @@ body{
     gap:1rem;
     }
  }
+ /* ------------------footer container ends here----------------- */
